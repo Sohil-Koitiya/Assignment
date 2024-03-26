@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping Logic Question</title>
+    <!-- CSS Stars here -->
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        p{
+            font-size: 15px;
+        }
+        .box{
+            width: 60%;
+            margin: 30px 30px;
+            border: 1px dashed black;
+            padding: 10px;
+        }
+        pre{
+            font-size: 15px;
+        }
+    </style>
+        <!-- CSS Stars here -->
+</head>
+<body>
+    <h1>Looping Logic Questions</h1> <br><hr>
+    <!-- box division starts here -->
+    <div class="box">
+        <h3>Q30:  What are the looping structures in JavaScript? Any one Example?</h3>
+        <p>Ans : we can use some line of code repeatedly by using loops, like 'for', 'while', 'do while', 'foreach', 'forin', 'forof'</p>
+        <hr>
+        <h3>Q31: Write to print 972 to 897 using for loop in JS?</h3>
+        <p>Ans : </p>
+        <pre> 
+            let i = 972;
+             for(i; i>=897; i--)
+            {
+            document.write(i+" " );
+            }
+        </pre>
+        <hr>
+        <h3>Q32: Write to print factorial of given number?</h3>
+        <p>Ans : </p>
+        <pre> 
+            let num = prompt('enter a number');
+
+            function fac(num){
+                let answer = 1;
+                if (num == 0 || num == 1){
+                  return answer;
+                }
+                else if(num > 1){
+                  for(var i = num; i >= 1; i--){
+                    answer = answer * i;
+                  }
+                  return answer;
+                }
+                else{
+                  return "number has to be positive."
+                }  
+              }
+              
+              answer = fac(num)
+              console.log(answer);
+        </pre>
+        <hr>
+        <h3>Q33: Write to print Fibonacci series up to given numbers?</h3>
+        <p>Ans : </p>
+        <pre> 
+                var n1 = 0,  n2 = 1, next_num, i;  
+                var num = parseInt (prompt (" Enter the number "));  
+                for ( i = 1; i <= num; i++)  {
+                
+                document.write (" <br> " +  n1);                          // print the n1  
+                next_num = n1 + n2;                                  // sum of n1 and n2 into the next_num  
+                
+                n1 = n2; // assign the n2 value into n2  
+                n2 = next_num;                                      // assign the next_num into n2  
+                  }  
+        </pre>
+        <hr>
+        <h3>Q34: Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?</h3>
+        <p>Ans : </p>
+        <pre> 
+            let num = 123456789;
+            
+            let rev = 0;
+            while(num>0){
+
+                last_num = num%10;
+                
+                rev = rev*10 + last_num;
+                
+                num = Math.floor(num/10);
+            }
+            console.log(rev);
+        </pre>
+        <hr>
+        <h3>Q36: Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: -5) in JS?</h3>
+        <p>Ans : </p>
+        <pre> 
+            function fdigit(n) 
+            { 
+                while (n >= 10)  
+                    n /= 10; 
+                
+                return Math.floor(n); 
+            } 
+            
+            function ldigit(n) 
+            { 
+                return Math.floor(n % 10); 
+            } 
+                let n = 123458796; 
+                document.write(fdigit(n)+ldigit(n));            
+                // 7 
+        </pre>
+        <hr>
+        <h3>Q38: Use console.log() and escape characters to print the following pattern in JS?</h3>
+        <pre>
+            1
+            1 0
+            1 0 1
+            1 0 1 0
+            1 0 1 0 1
+        </pre>
+        <p>Ans : </p>
+        <pre> 
+            
+        for(i; i<=4; i++)
+        {
+            let j=0;
+            for(j; j<=i; j++)
+            {
+                if(j%2==0)
+                {
+                    document.write(" 1 ");
+                }
+                else{
+                    document.write(" 0 ");
+                }
+            } 
+            document.write("<br>");
+        }
+        </pre>
+        <hr>
+        <pre>
+            A
+            B C
+            D E F
+            G H I J
+            K L M N O
+        </pre>
+        <p>Ans : </p>
+        <pre> 
+            let n = 5; 
+                let str = "";
+                let count = 0;
+                for (let i = 1; i <= n; i++) {
+                for (let j = 0; j < i; j++) {
+                    str += String.fromCharCode(count + 65);
+                    count++;
+                }
+                string += "\n";
+                }
+                console.log(str);
+        </pre>
+        <hr>
+        <pre>
+            1
+            2 3
+            4 5 6
+            7 8 9 10
+            11 12 13 14 15
+        </pre>
+        <p>Ans : </p>
+        <pre> 
+            let n = 4; 
+            let string = "";
+            let count = 1;
+            // External loop
+            for (let i = 1; i <= n; i++) {
+              for (let j = 1; j <= i; j++) {
+                string += count;
+                count++;
+              }
+              string += "\n";
+            }
+            console.log(string);
+        </pre>
+        <hr>
+        <pre>
+            *
+            * *
+            * * *
+            * * * *
+            * * * * *
+        </pre>
+        <p>Ans : </p>
+        <pre> 
+            let i = 0;
+                for(i; i<=4; i++)
+            {
+                let j=0;
+                for(j; j<=i; j++)
+                {
+                    
+                    document.write(" * ");
+                } 
+                document.write("<br>");
+            }
+        </pre>
+        <hr>
+     
+    </div>
+    <!-- box division ends here -->
+
+    
+
+</body>
+</html>
